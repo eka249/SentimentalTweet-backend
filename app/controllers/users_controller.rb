@@ -31,13 +31,23 @@ class UsersController < ApplicationController
         end
     end
 
-    # def update
-    #     @user = User.find(params[:id])
-    #     @user.update(name: params[:name])
-    #     @user.save
-    #     render json: @user
-    #     # redirect_to @profile
-    # end
+    def update
+        @user = User.find(params[:id])
+        @user.update(name: params[:name])
+        @user.save
+        render json: @user
+        # redirect_to @profile
+    end
+
+    def delete
+        @user = User.find(params[:id])
+        @user.destroy()
+        
+        # redirect_to @profile
+    end
+
+
+
 
     private
 

@@ -9,15 +9,7 @@ class TwitterAccountsController < ApplicationController
         render json: twitter_account
     end
 
-    def new
-    end
-
     def create
-    end
-
-    def update
-        movie = TwitterAccount.find(params[:id])
-        byebug
     end
 
     def destroy

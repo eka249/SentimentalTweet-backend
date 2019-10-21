@@ -9,16 +9,13 @@ class TweetsController < ApplicationController
         render json: tweet
     end
 
-    def new
-    end
-
     def create
     end
 
-    # def update
-    #     tweet = Tweet.find(params[tweet_params])
-    #     byebug
-    # end
+    def update
+        tweet = Tweet.find(params[tweet_params])
+        byebug
+    end
 
     def destroy
     end
