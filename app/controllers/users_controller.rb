@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
     before_action :user_params, only: [:create]
     skip_before_action :authorized, only: [:create]
 
@@ -56,4 +57,3 @@ class UsersController < ApplicationController
     end
 end
 
-end
