@@ -2,8 +2,8 @@
 
 one:
   user: one
-  twitter_account: one
+  celeb: one
 
 two:
   user: two
-  twitter_account: two
+  celeb: two

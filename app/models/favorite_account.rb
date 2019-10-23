@@ -1,4 +1,4 @@
-class FavoriteAccount < ApplicationRecord
+class FavoriteCeleb < ApplicationRecord
   belongs_to :user
-  belongs_to :twitter_account
+  belongs_to :celeb
 end

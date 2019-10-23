@@ -2228,3 +2228,1315 @@ Processing by AuthController#create as */*
 Completed 401 Unauthorized in 14ms (Views: 2.7ms | ActiveRecord: 5.4ms)
 
 
+Started POST "/login" for ::1 at 2019-10-22 09:21:47 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "auth"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 60ms (Views: 3.8ms | ActiveRecord: 42.8ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 09:26:55 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "auth"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 15ms (Views: 3.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 09:30:50 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "auth"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 12ms (Views: 3.9ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 13:14:46 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "auth"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 53ms (Views: 2.7ms | ActiveRecord: 44.9ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 13:14:48 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "auth"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 13:14:51 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "auth"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 13:19:14 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"asif", "password"=>"[FILTERED]", "auth"=>{"username"=>"asif", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asif"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2019-10-22 13:21:09 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (40.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 406 Not Acceptable in 65ms (Views: 0.7ms | ActiveRecord: 90.3ms)
+
+
+Started POST "/users" for ::1 at 2019-10-22 13:23:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 11ms (Views: 3.1ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/users" for ::1 at 2019-10-22 13:26:00 -0700
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/application_controller.rb:9: syntax error, unexpected ',', expecting ')'
+            , 'test', 'HS256')
+            ^
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/application_controller.rb:9: syntax error, unexpected ',', expecting end
+            , 'test', 'HS256')
+                    ^
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/application_controller.rb:9: syntax error, unexpected ')', expecting end
+            , 'test', 'HS256')
+                             ^
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/application_controller.rb:41: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/application_controller.rb:9: syntax error, unexpected ',', expecting ')'
+app/controllers/application_controller.rb:9: syntax error, unexpected ',', expecting end
+app/controllers/application_controller.rb:9: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:41: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users" for ::1 at 2019-10-22 13:26:18 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 406 Not Acceptable in 13ms (Views: 2.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-22 13:45:05 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test_username", "password"=>"[FILTERED]", "auth"=>{"username"=>"test_username", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 13ms (Views: 3.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for ::1 at 2019-10-22 13:45:11 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 12ms (Views: 0.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 15:26:00 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFavoriteAccounts (20191021164348)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (46.7ms)[0m  [1m[35mDROP TABLE "favorite_accounts"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (42.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191021164348"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweetAccounts (20191021164326)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "tweet_accounts"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191021164326"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweets (20191021163659)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "tweets"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191021163659"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTwitterAccounts (20191021163635)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "twitter_accounts"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191021163635"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20191021163539)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191021163539"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-10-22 19:57:29 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20191021163539)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163539_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163539"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCelebs (20191021163635)
+  [1m[35m (40.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "celebs" ("id" bigserial primary key, "name" character varying, "celeb_username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163635_create_celebs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163635"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweets (20191021163659)
+  [1m[35m (31.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "content" text, "sentiment" float, "celeb_username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163659_create_tweets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163659"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweetAccounts (20191021164326)
+  [1m[35m (25.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "tweet_accounts" ("id" bigserial primary key, "celeb_username_id" bigint, "tweet_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5eddbc1216"
+FOREIGN KEY ("celeb_username_id")
+  REFERENCES "celeb_usernames" ("id")
+, CONSTRAINT "fk_rails_374cd7e1a3"
+FOREIGN KEY ("tweet_id")
+  REFERENCES "tweets" ("id")
+)[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTweetAccounts (20191021164326)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "tweet_accounts" ("id" bigserial primary key, "celeb_username_id" bigint, "tweet_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5eddbc1216"
+FOREIGN KEY ("celeb_username_id")
+  REFERENCES "celeb_usernames" ("id")
+, CONSTRAINT "fk_rails_374cd7e1a3"
+FOREIGN KEY ("tweet_id")
+  REFERENCES "tweets" ("id")
+)[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTweetAccounts (20191021164326)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE TABLE "tweet_accounts" ("id" bigserial primary key, "celeb_id" bigint, "tweet_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c0b1b45b88"
+FOREIGN KEY ("celeb_id")
+  REFERENCES "celebs" ("id")
+, CONSTRAINT "fk_rails_374cd7e1a3"
+FOREIGN KEY ("tweet_id")
+  REFERENCES "tweets" ("id")
+)[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_celeb_id" ON "tweet_accounts"  ("celeb_id")[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_tweet_id" ON "tweet_accounts"  ("tweet_id")[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021164326"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavoriteCelebs (20191021164348)
+  [1m[35m (40.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "favorite_celebs" ("id" bigserial primary key, "user_id" bigint, "celeb_username_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b480b4a972"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_1770182687"
+FOREIGN KEY ("celeb_username_id")
+  REFERENCES "celeb_usernames" ("id")
+)[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFavoriteCelebs (20191021164348)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.8ms)[0m  [1m[35mCREATE TABLE "favorite_celebs" ("id" bigserial primary key, "user_id" bigint, "celeb_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b480b4a972"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_66d7aabe9f"
+FOREIGN KEY ("celeb_id")
+  REFERENCES "celebs" ("id")
+)[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_user_id" ON "favorite_celebs"  ("user_id")[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_celeb_id" ON "favorite_celebs"  ("celeb_id")[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021164348"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-10-22 23:41:57 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-10-22 23:41:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2019-10-22 23:42:30 -0700
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-10-23 01:10:16 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-23 01:10:18 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 01:20:15 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 01:21:22 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 01:22:09 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 01:30:07 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 01:37:40 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 01:37:54 -0700
+  
+LoadError (Unable to autoload constant AuthController, expected /Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/auth_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2019-10-23 01:40:20 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test_username", "password"=>"[FILTERED]", "auth"=>{"username"=>"test_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.47ms)
+Completed 401 Unauthorized in 26ms (Views: 7.6ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 01:43:50 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test_username", "password"=>"[FILTERED]", "auth"=>{"username"=>"test_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 11ms (Views: 2.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:45:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 22ms (Views: 2.5ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:47:18 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 406 Not Acceptable in 20ms (Views: 4.8ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:48:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 6ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:48:44 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (40.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", ""], ["name", ""], ["created_at", "2019-10-23 08:48:44.673672"], ["updated_at", "2019-10-23 08:48:44.673672"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.4ms)
+Completed 201 Created in 57ms (Views: 4.8ms | ActiveRecord: 44.5ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:48:57 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.47ms)
+Completed 406 Not Acceptable in 23ms (Views: 7.0ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:49:05 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", ""], ["name", ""], ["created_at", "2019-10-23 08:49:05.661467"], ["updated_at", "2019-10-23 08:49:05.661467"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.55ms)
+Completed 201 Created in 57ms (Views: 4.3ms | ActiveRecord: 45.3ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:49:13 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", ""], ["name", ""], ["created_at", "2019-10-23 08:49:13.202439"], ["updated_at", "2019-10-23 08:49:13.202439"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:49:26 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 20ms (Views: 3.2ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:49:33 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 406 Not Acceptable in 4ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:49:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 406 Not Acceptable in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:49:54 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 5ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 01:50:10 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"", "user"=>{"username"=>"", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", ""], ["name", ""], ["created_at", "2019-10-23 08:50:10.873873"], ["updated_at", "2019-10-23 08:50:10.873873"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 201 Created in 52ms (Views: 2.7ms | ActiveRecord: 45.5ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 01:50:21 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"55", "password"=>"[FILTERED]", "auth"=>{"username"=>"55", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "55"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 7ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 01:53:49 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"55", "password"=>"[FILTERED]", "auth"=>{"username"=>"55", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "55"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 10ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 01:59:06 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"55", "password"=>"[FILTERED]", "auth"=>{"username"=>"55", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "55"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 11ms (Views: 5.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 01:59:39 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"55", "password"=>"[FILTERED]", "auth"=>{"username"=>"55", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "55"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 10ms (Views: 3.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:00:50 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"55", "password"=>"[FILTERED]", "auth"=>{"username"=>"55", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "55"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 9ms (Views: 3.2ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/celebs" for ::1 at 2019-10-23 02:13:58 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 02:14:02 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 02:15:05 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/celebs" for ::1 at 2019-10-23 02:15:13 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:17:32 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"hard code test username", "password"=>"[FILTERED]", "auth"=>{"username"=>"hard code test username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hard code test username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 12ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:19:38 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"hard code test username", "password"=>"[FILTERED]", "auth"=>{"username"=>"hard code test username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hard code test username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:19:53 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"hard code test username", "password"=>"[FILTERED]", "auth"=>{"username"=>"hard code test username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hard code test username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:20:26 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"hard code test username", "password"=>"[FILTERED]", "auth"=>{"username"=>"hard code test username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hard code test username"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 02:23:26 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"test1", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test1", "password_digest"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test1"], ["password_digest", "test1"], ["name", ""], ["created_at", "2019-10-23 09:23:26.593907"], ["updated_at", "2019-10-23 09:23:26.593907"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (44.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.74ms)
+Completed 201 Created in 120ms (Views: 10.8ms | ActiveRecord: 54.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:23:40 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007f9156530f90>):
+  
+app/controllers/auth_controller.rb:8:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:23:51 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007f9159be5180>):
+  
+app/controllers/auth_controller.rb:8:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:23:54 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:6
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007f9159a52598>):
+  
+app/controllers/auth_controller.rb:8:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:30:17 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 14.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd37a72510>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:30:24 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd3922bdf0>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/users" for ::1 at 2019-10-23 02:30:29 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"test1", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test1", "password_digest"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test1"], ["password_digest", "test1"], ["name", ""], ["created_at", "2019-10-23 09:30:29.237321"], ["updated_at", "2019-10-23 09:30:29.237321"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.25ms)
+Completed 201 Created in 23ms (Views: 10.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 02:31:02 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"test1", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test1", "password_digest"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 25ms (Views: 5.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:31:13 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd3b8dea60>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/users" for ::1 at 2019-10-23 02:32:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"test1", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test1", "password_digest"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 406 Not Acceptable in 10ms (Views: 0.8ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:33:41 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd37940610>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/celebs" for ::1 at 2019-10-23 02:34:12 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:34:23 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd38fcdea0>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:34:28 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd37a60248>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:34:36 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ffd37888ee8>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-10-23 02:41:32 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:41:43 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 9.6ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007ff66c2829a8>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:42:32 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:5
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00007fe8052ea0c8>):
+  
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-10-23 02:44:25 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test1", "password"=>"[FILTERED]", "auth"=>{"username"=>"test1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:7
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 5.6ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/auth_controller.rb:9:in `create'
+Started POST "/users" for ::1 at 2019-10-23 02:45:18 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"test1", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test1", "password_digest"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 406 Not Acceptable in 20ms (Views: 6.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 02:45:42 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"", "username"=>"test2", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test2", "password_digest"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (4.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test2"], ["password_digest", "test2"], ["name", ""], ["created_at", "2019-10-23 09:45:42.101315"], ["updated_at", "2019-10-23 09:45:42.101315"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "test2"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.39ms)
+Completed 201 Created in 20ms (Views: 3.0ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:45:55 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test2", "password"=>"[FILTERED]", "auth"=>{"username"=>"test2", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:7
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 2.0ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/auth_controller.rb:9:in `create'
+Started POST "/users" for ::1 at 2019-10-23 02:46:51 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test3", "username"=>"test3", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test3", "password_digest"=>"[FILTERED]", "name"=>"test3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test3"], ["password_digest", "test3"], ["name", "test3"], ["created_at", "2019-10-23 09:46:52.114898"], ["updated_at", "2019-10-23 09:46:52.114898"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "test3"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.11ms)
+Completed 201 Created in 23ms (Views: 3.7ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:46:58 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test3", "password"=>"[FILTERED]", "auth"=>{"username"=>"test3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test3"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:7
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/auth_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2019-10-23 02:50:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test4", "username"=>"test4", "password"=>"[FILTERED]", "user"=>{"username"=>"test4", "name"=>"test4"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 18ms (Views: 3.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 02:51:02 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test4", "username"=>"test4", "password"=>"[FILTERED]", "user"=>{"username"=>"test4", "name"=>"test4"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 20ms (Views: 4.1ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 02:51:19 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test4", "username"=>"test4", "password"=>"[FILTERED]", "user"=>{"username"=>"test4", "name"=>"test4"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 15ms (Views: 2.5ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/users" for ::1 at 2019-10-23 02:51:47 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test4", "username"=>"test4", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test4", "password_digest"=>"[FILTERED]", "name"=>"test4"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test4"], ["password_digest", "test4"], ["name", "test4"], ["created_at", "2019-10-23 09:51:47.948680"], ["updated_at", "2019-10-23 09:51:47.948680"]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "test4"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 201 Created in 19ms (Views: 2.6ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 02:52:21 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test4", "password"=>"[FILTERED]", "auth"=>{"username"=>"test4", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:7
+Unpermitted parameter: :password
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.8ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/auth_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/users" for ::1 at 2019-10-23 02:59:58 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test4", "username"=>"test4", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test4", "password_digest"=>"[FILTERED]", "name"=>"test4"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 406 Not Acceptable in 19ms (Views: 4.9ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/login" for ::1 at 2019-10-23 03:00:00 -0700
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test4", "password"=>"[FILTERED]", "auth"=>{"username"=>"test4", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:7
+Unpermitted parameter: :password
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/auth_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2019-10-23 03:05:06 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test4", "password"=>"[FILTERED]", "auth"=>{"username"=>"test4", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/auth_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-10-23 03:06:36 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"test4", "password"=>"[FILTERED]", "auth"=>{"username"=>"test4", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test4"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:7
+Unpermitted parameter: :password
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.3ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/auth_controller.rb:9:in `create'
+Started POST "/celebs" for ::1 at 2019-10-23 03:09:48 -0700
+Processing by CelebsController#create as JSON
+  Parameters: {"celeb"=>"realDonaldTrump"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+

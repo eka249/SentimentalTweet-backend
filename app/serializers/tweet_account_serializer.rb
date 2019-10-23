@@ -1,4 +1,4 @@
 class TweetAccountSerializer < ActiveModel::Serializer
   attributes :id, :tweet
-  has_one :twitter_account
+  has_one :celeb_username
 end

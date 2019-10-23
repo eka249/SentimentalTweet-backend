@@ -3,6 +3,7 @@ class CreateTweets < ActiveRecord::Migration[5.2]
     create_table :tweets do |t|
       t.text :content
       t.float :sentiment
+      t.string :celeb_username
 
       t.timestamps
     end

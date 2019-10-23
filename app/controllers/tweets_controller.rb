@@ -10,7 +10,13 @@ class TweetsController < ApplicationController
     end
 
     def create
+        
     end
+
+    def get_tweet
+        
+    end
+
 
     def update
         tweet = Tweet.find(params[tweet_params])
@@ -23,6 +29,6 @@ class TweetsController < ApplicationController
     private
 
     def tweet_params
-        params.require(:tweet).permit(:content,:sentiment)
+        params.require(:tweet).permit(:content,:sentiment, :celeb_username)
     end
 end
