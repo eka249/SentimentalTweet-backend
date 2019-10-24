@@ -22,13 +22,18 @@ class UsersController < ApplicationController
     end
 
     def create
+        # puts "reached create on backend"
+        # byebug
         @user = User.create(user_params)
+        puts user_params[:password_digest]
         # byebug
         if @user.valid?
             @token = encode_token({user_id: @user.id})
             render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
+            # puts "passed @user.valid? in users controller"
         else
             render json: {error: "failed to create user #{params[:username]}"}, status: :not_acceptable
+            # puts "passed @user.valid? and failed in users controller"
         end
     end
 
@@ -53,7 +58,8 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username,:name, :password_digest)
+        params.require(:user).permit(:username,:name,:password_digest)              
+        
     end
 end
 
