@@ -45,5 +45,3 @@ class UsersController < ApplicationController
         params.require(:user).permit(:username,:name, :password_digest)
     end
 end
-
-end
