@@ -24,8 +24,8 @@ class UsersController < ApplicationController
     def create
         # puts "reached create on backend"
         # byebug
-        @user = User.create(user_params)
-        puts user_params[:password_digest]
+        # @user = User.create(user_params)
+        @user = User.create(name: params[:name], username: params[:username], password: params[:password])
         # byebug
         if @user.valid?
             @token = encode_token({user_id: @user.id})
@@ -58,8 +58,8 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username,:name,:password_digest)              
-        
+        # params.require(:username,:name,:password)
+        params.require(:user).permit(:username,:name,:password)
     end
 end
 

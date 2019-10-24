@@ -12,6 +12,7 @@ gem 'dotenv-rails'
 gem 'puma', '~> 3.11'
 gem 'active_model_serializers'
 gem 'bcrypt', '~> 3.1.13'
+# gem "bcrypt", "~> 3.1.1"
 gem 'rest-client'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

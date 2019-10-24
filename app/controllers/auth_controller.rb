@@ -1,23 +1,23 @@
 class AuthController < ApplicationController
+  # before_action :user_login_params, only: [:create]
   skip_before_action :authorized, only: [:create]
 
 
   def create
     # byebug
     @user = User.find_by(username: user_login_params[:username])
-    #User#authenticate comes from BCrypt
     puts @user
+    #User#authenticate comes from BCrypt
     puts "password/username below"
-    puts user_login_params[:password]
-    puts user_login_params[:username]
+    puts params[:password]
+    puts params[:username]
+    puts @user.authenticate(user_login_params[:password])
     if @user && @user.authenticate(user_login_params[:password])
-      puts "got to the else statement"
+      puts "if statement true"
       # encode token comes from ApplicationController
       token = encode_token({ user_id: @user.id })
       render json: { user: UserSerializer.new(@user), jwt: token }, status: :accepted
-      puts "passed the if statement"
-    else
-      puts "got to the else statement"
+      else
       render json: { message: 'Invalid username or password' }, status: :unauthorized
       puts "got to the else statement"
     end
