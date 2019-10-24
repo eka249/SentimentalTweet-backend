@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   resources :tweet_accounts
   resources :tweets
   resources :users
+  resources :celebs
   # resources :auth
   post '/login', to: 'auth#create'
   # ^^creating a valid token
   get '/current_user', to: 'auth#show'
+  get '/allcelebs', to: 'celebs#index'
   post '/users', to: 'users#create'
   post '/celebs', to: 'celebs#get_celeb'
   get '/profile', to: 'users#profile'

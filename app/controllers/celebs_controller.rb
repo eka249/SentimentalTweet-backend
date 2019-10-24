@@ -5,7 +5,7 @@ class CelebsController < ApplicationController
     require 'twitter'
     
     def index
-        @celebs = Celeb.all
+        celebs = Celeb.all
         render json: celebs
     end
 
@@ -15,6 +15,9 @@ class CelebsController < ApplicationController
     end
 
     def get_celeb
+        puts "hit get_celeb"
+        puts params
+        puts params[:celebrity]
         client = 
             Twitter::REST::Client.new do |config|
             config.consumer_key= "#{ENV["CONSUMER_KEY"]}"
@@ -23,7 +26,7 @@ class CelebsController < ApplicationController
             config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
         end
         celeb_results = client.search(
-            "realDonaldTrump" , 
+            params[:celebrity] , 
             #^add proper params name
             result_type: "recent").take(3).collect do |tweet|
                 [
@@ -53,6 +56,8 @@ class CelebsController < ApplicationController
         # #refer to https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-call-api
         # # and 
         # # https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cunix#get-the-keys-for-your-resource    
+
+    end
 
     def sent_analysis
         key_var = "TEXT_ANALYTICS_SUBSCRIPTION_KEY"
