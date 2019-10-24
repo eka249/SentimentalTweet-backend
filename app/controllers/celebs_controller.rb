@@ -5,6 +5,8 @@ class CelebsController < ApplicationController
     require 'twitter'
     
     def index
+        puts "hit get_celeb"
+        puts params
         celebs = Celeb.all
         render json: celebs
     end
@@ -26,12 +28,16 @@ class CelebsController < ApplicationController
             config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
         end
         celeb_results = client.search(
-            params[:celebrity] , 
+            # params[:celebrity] , 
+            "realDonaldTrump",
             #^add proper params name
             result_type: "recent").take(3).collect do |tweet|
                 [
-                "#{tweet.text}", "#{tweet.user.screen_name}"]
+                "#{tweet.full_text}", "#{tweet.user.screen_name}"]
             end
+            render json: celeb_results
+            puts "twitter restuls below"
+            puts celeb_results
             
     
         sentiment_temp = []

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :tweet_accounts
   resources :tweets
   resources :users
-  resources :celebs
+  # resources :celebs
   # resources :auth
   post '/login', to: 'auth#create'
   # ^^creating a valid token
