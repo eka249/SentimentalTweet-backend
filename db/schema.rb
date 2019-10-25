@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_10_21_164348) do
     t.text "content"
     t.float "sentiment"
     t.string "celeb_username"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
