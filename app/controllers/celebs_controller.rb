@@ -6,7 +6,6 @@ class CelebsController < ApplicationController
     
     def index
         puts "hit get_celeb"
-        puts params
         celebs = Celeb.all
         render json: celebs
     end
