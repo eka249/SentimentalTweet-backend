@@ -1,28 +1,36 @@
 class FavoriteCelebsController < ApplicationController
     
     def create
-        @favorite_celeb= FavoriteCelebsController.create(favorite_celeb_params)
+        @favorite_celeb= FavoriteCeleb.create(params[favorite_celeb_params])
+        @favorite_celeb.save
     end
 
     
-    def index
-        @favorite_celebs = FavoriteCeleb.all
-        render json: favorite_celebs
-    end
-
     def show
-        @favorite_celeb = FavoriteCeleb.find(params[:favorite_celeb_params])
-        render json: favorite_celeb
+        @favorite_celebs = FavoriteCeleb.select{|record| record.user_id = params[:user_id]}
+        render json: @favorite_celebs
     end
 
-    # def update
-    #     byebug
+    # def show_by_celeb
+    #     @favorite_celeb = FavoriteCeleb.find(params[:favorite_celeb_params])
+    #     render json: @favorite_celeb
+    # end
+
+    # def show
+    #     @favorite_celeb = FavoriteCeleb.find(params[:favorite_celeb_params])
+    #     render json: @favorite_celeb
     # end
 
     def delete
         @favorite_celeb = FavoriteCeleb.find(params[:favorite_celeb_params])
         @favorite_celeb.destroy()
     end
+
+    def destroy
+        @favorite_celebs = FavoriteCeleb.select{|record| record.user_id = params[:user_id]}
+        @favorite_celebs.destroy()
+    end
+
 
 
     private
