@@ -22,19 +22,19 @@ class FavoriteCelebsController < ApplicationController
     # end
 
     def delete
-        @favorite_celeb = FavoriteCeleb.find(params[:favorite_celeb_params])
+        @favorite_celeb = FavoriteCeleb.find(params[favorite_celeb_params])
         @favorite_celeb.destroy()
     end
 
-    def destroy
-        @favorite_celebs = FavoriteCeleb.select{|record| record.user_id = params[:user_id]}
-        @favorite_celebs.destroy()
+    def logout_remove
+        @favorite_celebs = FavoriteCeleb.select{|record| record.user_id == params[:user_id]}
+        @favorite_celebs.each(&:destroy)
     end
 
 
 
     private
     def favorite_celeb_params
-        params.require(:favorite_celeb).permit(:user_id, :celeb_id)
+        params.require(:favorite_celeb).permit(:user_id,:celeb_id)
     end
 end
