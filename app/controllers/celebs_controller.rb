@@ -6,37 +6,37 @@ class CelebsController < ApplicationController
     
     def index
         puts "hit get_celeb"
-        celebs = Celeb.all
-        render json: celebs
+        @celebs = Celeb.all
+        render json: @celebs
     end
 
     def show
         @celeb = Celeb.find(params[:id])
-        render json: celeb
+        render json: @celeb
     end
 
-    def get_celeb
+    def get_celeb_tweets
         puts "hit get_celeb"
         # puts params
         # puts params[:celebrity]
-        # client = 
-        #     Twitter::REST::Client.new do |config|
-        #     config.consumer_key= "#{ENV["CONSUMER_KEY"]}"
-        #     config.consumer_secret = "#{ENV["CONSUMER_SECRET"]}"
-        #     config.access_token= "#{ENV["ACCESS_TOKEN_KEY"]}"
-        #     config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
-        # end
-        # celeb_results = client.search(
-        #     # params[:celebrity] , 
-        #     "by: realDonaldTrump",
-        #     #^add proper params name
-        #     result_type: "recent").take(3).collect do |tweet|
-        #         [
-        #         "#{tweet.full_text}", "#{tweet.user.screen_name}"]
-        #     end
-        #     render json: celeb_results
-        #     # puts "twitter restuls below"
-        #     # puts celeb_results
+        client = 
+            Twitter::REST::Client.new do |config|
+            config.consumer_key= "#{ENV["CONSUMER_KEY"]}"
+            config.consumer_secret = "#{ENV["CONSUMER_SECRET"]}"
+            config.access_token= "#{ENV["ACCESS_TOKEN_KEY"]}"
+            config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
+        end
+        @celeb_results = client.search(
+            "by: "+ params[:celebrity],
+            # "by: realDonaldTrump",
+            #^add proper params name
+            result_type: "recent").take(3).collect do |tweet|
+                [
+                "#{tweet.full_text}", "#{tweet.user.screen_name}"]
+            end
+            render json: @celeb_results
+            # puts "twitter restuls below"
+            # puts celeb_results
             
     
         # sentiment_temp = []
@@ -45,7 +45,7 @@ class CelebsController < ApplicationController
         # puts "after sentiment"
       
     
-        #     celeb_results.each do |result|
+        #     @celeb_results.each do |result|
         #     sentiment_temp.push( {"language":"en",
         #     "id":"1",
         #     "text":"#{result[0]}"
@@ -61,17 +61,17 @@ class CelebsController < ApplicationController
 
         #     # CelebsController.sent_analysis(celeb_results_for_sentiment)
         
-            fakeTweet = Tweet.new(content: "Hey this is a test tweet" ,sentiment: 0.7 , date: "10/23/10" ,celeb_username: "realDonaldTrump")
+        #     # fakeTweet = Tweet.new(content: "Hey this is a test tweet" ,sentiment: 0.7 , date: "10/23/10" ,celeb_username: "realDonaldTrump")
 
-            fakeTweet2 = Tweet.new(content: "second test tweet ;asdoifnsd;flienslrknselrknserlkerelrksjrelrirjeslrisjelivjoishdfnsa;/" , sentiment: 0.1  , date: "10/23/18" , celeb_username: "realDonaldTrump")
+        #     # fakeTweet2 = Tweet.new(content: "second test tweet ;asdoifnsd;flienslrknselrknserlkerelrksjrelrirjeslrisjelivjoishdfnsa;/" , sentiment: 0.1  , date: "10/23/18" , celeb_username: "realDonaldTrump")
 
-            return [fakeTweet, fakeTweet2]
+        #     # return [fakeTweet, fakeTweet2]
         
-        end     
-        # RestClient.get("https://westus.api.cognitive.microsoft.com/text/analytics/v2.1/sentiment"
+           
+        # RestClient.get("https://westus.api.cognitive.microsoft.com/text/analytics/v2.1/sentiment")
 
-        # #refer to https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-call-api
-        # # https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cunix#get-the-keys-for-your-resource    
+        #refer to https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-call-api
+        # https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cunix#get-the-keys-for-your-resource    
     end
     def sent_analysis
         key_var = "TEXT_ANALYTICS_SUBSCRIPTION_KEY"
@@ -112,3 +112,4 @@ class CelebsController < ApplicationController
 
     def destroy
     end
+end
