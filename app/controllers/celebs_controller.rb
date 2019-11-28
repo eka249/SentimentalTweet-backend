@@ -15,10 +15,9 @@ class CelebsController < ApplicationController
         render json: @celeb
     end
 
-    def get_celeb_tweets
+
+    def get_all_celebs
         puts "hit get_celeb"
-        # puts params
-        # puts params[:celebrity]
         client = 
             Twitter::REST::Client.new do |config|
             config.consumer_key= "#{ENV["CONSUMER_KEY"]}"
@@ -26,14 +25,13 @@ class CelebsController < ApplicationController
             config.access_token= "#{ENV["ACCESS_TOKEN_KEY"]}"
             config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
         end
-        @celeb_results = client.search(
-            "by: "+ params[:celebrity],
-            # "by: realDonaldTrump",
-            #^add proper params name
-            result_type: "recent").take(3).collect do |tweet|
-                [
-                "#{tweet.full_text}", "#{tweet.user.screen_name}"]
-            end
+        @celeb_results = client.friends(
+            result_type: "recent")
+            # .each do |tweet|
+            #     [
+            #     # "#{tweet.user}", 
+            #     "#{tweet.user.screen_name}"]
+            # end
             render json: @celeb_results
             # puts "twitter restuls below"
             # puts celeb_results
