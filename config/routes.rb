@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :celebs
   # resources :auth
   post '/login', to: 'auth#create'
-  delete '/del_favorites', to: 'favorite_celebs#destroy'
+  post '/del_favorites', to: 'favorite_celebs#logout_remove'
   # ^^creating a valid token
   get '/current_user', to: 'auth#show'
   post '/users', to: 'users#create'

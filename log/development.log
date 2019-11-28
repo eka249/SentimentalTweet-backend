@@ -17682,35 +17682,637 @@ Completed 500 Internal Server Error in 89ms (ActiveRecord: 84.1ms)
 NoMethodError (private method `destroy' called for []:Array):
   
 app/controllers/favorite_celebs_controller.rb:31:in `destroy'
-Started POST "/login" for ::1 at 2019-11-27 00:33:08 -0800
+  [1m[36mUser Load (47.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCeleb Load (30.3ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-11-26 20:31:42 -0800
+  [1m[35m (26.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (27.1ms)
+Completed 200 OK in 151ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-26 20:33:42 -0800
+Started GET "/celebs" for ::1 at 2019-11-26 20:33:42 -0800
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"a", "username"=>"a", "password"=>"[FILTERED]", "user"=>{"username"=>"a", "password"=>"[FILTERED]", "name"=>"a"}}
+Completed 500 Internal Server Error in 558ms (ActiveRecord: 19.3ms)
+
+
   
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fffdbee09c0>
+Did you mean?  password=):
   
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+app/controllers/users_controller.rb:29:in `create'
+Started GET "/profile" for ::1 at 2019-11-26 20:33:43 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 37ms (Views: 35.8ms | ActiveRecord: 8.8ms)
+
+
+Completed 401 Unauthorized in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-26 20:33:43 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-11-26 20:34:11 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/auth_controller.rb:14:in `create'
+Started GET "/celebs" for ::1 at 2019-11-26 20:34:11 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (133.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1036.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sent-tweet-backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1261.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sent-tweet-backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (9500.7ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (3871.4ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (55.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (20.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20191021163539)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163539_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163539"]]
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCelebs (20191021163635)
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE TABLE "celebs" ("id" bigserial primary key, "name" character varying, "celeb_username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163635_create_celebs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163635"]]
+  ↳ bin/rails:9
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweets (20191021163659)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "content" text, "sentiment" float, "celeb_username" character varying, "date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163659_create_tweets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163659"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweetAccounts (20191021164326)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "tweet_accounts" ("id" bigserial primary key, "celeb_id" bigint, "tweet_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c0b1b45b88"
+FOREIGN KEY ("celeb_id")
+  REFERENCES "celebs" ("id")
+, CONSTRAINT "fk_rails_374cd7e1a3"
+FOREIGN KEY ("tweet_id")
+  REFERENCES "tweets" ("id")
+)[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_celeb_id" ON "tweet_accounts"  ("celeb_id")[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_tweet_id" ON "tweet_accounts"  ("tweet_id")[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021164326"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavoriteCelebs (20191021164348)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "favorite_celebs" ("id" bigserial primary key, "user_id" bigint, "celeb_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b480b4a972"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_66d7aabe9f"
+FOREIGN KEY ("celeb_id")
+  REFERENCES "celebs" ("id")
+)[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_user_id" ON "favorite_celebs"  ("user_id")[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_celeb_id" ON "favorite_celebs"  ("celeb_id")[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021164348"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (10.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-27 04:35:25.568473"], ["updated_at", "2019-11-27 04:35:25.568473"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCeleb Create (20.7ms)[0m  [1m[32mINSERT INTO "celebs" ("name", "celeb_username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Barack Obama"], ["celeb_username", "@BarackObama"], ["created_at", "2019-11-27 04:35:25.719587"], ["updated_at", "2019-11-27 04:35:25.719587"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mCeleb Create (0.9ms)[0m  [1m[32mINSERT INTO "celebs" ("name", "celeb_username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Katy Perry"], ["celeb_username", "@katyperry"], ["created_at", "2019-11-27 04:35:25.749314"], ["updated_at", "2019-11-27 04:35:25.749314"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+Started POST "/users" for ::1 at 2019-11-26 20:35:58 -0800
+Started GET "/celebs" for ::1 at 2019-11-26 20:35:58 -0800
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 5.8ms | ActiveRecord: 3.5ms)
+
+
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"a", "username"=>"a", "password"=>"[FILTERED]", "user"=>{"username"=>"a", "name"=>"a"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (6.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "a"], ["password_digest", "$2a$12$fWi.xutOv/T018o2IFSqjeNYuR3YNNtk2fA3/YjzIn9Tk8oNqzdOq"], ["name", "a"], ["created_at", "2019-11-27 04:35:58.646336"], ["updated_at", "2019-11-27 04:35:58.646336"]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "a"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (160.44ms)
+Completed 201 Created in 473ms (Views: 161.3ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-26 20:35:58 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-26 20:35:58 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTweet Load (26.7ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2019-11-27 00:27:16 -0800
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.45ms)
+Completed 202 Accepted in 422ms (Views: 8.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 00:27:16 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+Started GET "/celebs" for ::1 at 2019-11-27 00:27:16 -0800
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 202 Accepted in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (16.3ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 39ms (Views: 17.8ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 00:27:16 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.2ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 00:58:00 -0800
+Started DELETE "/del_favorites" for ::1 at 2019-11-27 00:58:00 -0800
+Processing by FavoriteCelebsController#destroy as */*
+  Parameters: {"favorite_celeb"=>{}}
+Processing by FavoriteCelebsController#create as */*
+  Parameters: {"dataToPost"=>["user_id: 1, celeb_id: 1", "user_id: 1, celeb_id: 2"], "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 400 Bad Request in 2ms (ActiveRecord: 6.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: favorite_celeb):
+  
+app/controllers/favorite_celebs_controller.rb:38:in `favorite_celeb_params'
+app/controllers/favorite_celebs_controller.rb:4:in `create'
+  [1m[36mFavoriteCeleb Load (35.1ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:30
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 36.0ms)
+
+
+  
+NoMethodError (private method `destroy' called for []:Array):
+  
+app/controllers/favorite_celebs_controller.rb:31:in `destroy'
+  [1m[36mFavoriteCeleb Load (0.7ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCeleb Load (0.7ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.2ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (2.0ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 1], ["created_at", "2019-11-27 09:02:33.000239"], ["updated_at", "2019-11-27 09:02:33.000239"]]
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFavoriteCeleb Load (1.0ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.6ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFavoriteCeleb Load (0.7ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavoriteCeleb Destroy (0.5ms)[0m  [1m[31mDELETE FROM "favorite_celebs" WHERE "favorite_celebs"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.3ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (0.4ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 1], ["created_at", "2019-11-27 09:08:14.764576"], ["updated_at", "2019-11-27 09:08:14.764576"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.2ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (0.4ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 2], ["created_at", "2019-11-27 09:08:17.331192"], ["updated_at", "2019-11-27 09:08:17.331192"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFavoriteCeleb Load (0.6ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.6ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.6ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.8ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.5ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavoriteCeleb Destroy (0.4ms)[0m  [1m[31mDELETE FROM "favorite_celebs" WHERE "favorite_celebs"."id" = $1[0m  [["id", 2]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavoriteCeleb Destroy (0.4ms)[0m  [1m[31mDELETE FROM "favorite_celebs" WHERE "favorite_celebs"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFavoriteCeleb Load (0.3ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.2ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (0.4ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 1], ["created_at", "2019-11-27 09:18:35.490363"], ["updated_at", "2019-11-27 09:18:35.490363"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.3ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (0.6ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 2], ["created_at", "2019-11-27 09:18:42.439512"], ["updated_at", "2019-11-27 09:18:42.439512"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for ::1 at 2019-11-27 01:19:09 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 466ms (Views: 6.5ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:19:10 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 202 Accepted in 4ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:19:10 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (9.6ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 18ms (Views: 6.2ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:19:10 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.4ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 01:19:28 -0800
+Started DELETE "/del_favorites" for ::1 at 2019-11-27 01:19:28 -0800
+  
+SyntaxError (/mnt/c/Users/desic/Desktop/Sentimental_Tweets/SentimentalTweet-backend/app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected {
+...vorite_celebs = FavoriteCeleb.{|record| record.user_id == pa...
+...                              ^
+/mnt/c/Users/desic/Desktop/Sentimental_Tweets/SentimentalTweet-backend/app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected '}', expecting end
+...rd.user_id == params[:user_id]}
+...                              ^):
+  
+app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected {
+app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected '}', expecting end
+  
+SyntaxError (/mnt/c/Users/desic/Desktop/Sentimental_Tweets/SentimentalTweet-backend/app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected {
+...vorite_celebs = FavoriteCeleb.{|record| record.user_id == pa...
+...                              ^
+/mnt/c/Users/desic/Desktop/Sentimental_Tweets/SentimentalTweet-backend/app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected '}', expecting end
+...rd.user_id == params[:user_id]}
+...                              ^):
+  
+app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected {
+app/controllers/favorite_celebs_controller.rb:30: syntax error, unexpected '}', expecting end
+Started POST "/login" for ::1 at 2019-11-27 01:20:18 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 457ms (Views: 4.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:20:19 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 202 Accepted in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:20:19 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.7ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:20:19 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.5ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 01:20:35 -0800
+Started DELETE "/del_favorites" for ::1 at 2019-11-27 01:20:35 -0800
+Processing by FavoriteCelebsController#create as */*
+  Parameters: {"dataToPost"=>["user_id: 1, celeb_id: 1", "user_id: 1, celeb_id: 2", "user_id: 1, celeb_id: 2", "user_id: 1, celeb_id: 1"], "favorite_celeb"=>{"dataToPost"=>["user_id: 1, celeb_id: 1", "user_id: 1, celeb_id: 2", "user_id: 1, celeb_id: 2", "user_id: 1, celeb_id: 1"]}}
+Processing by FavoriteCelebsController#destroy as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"favorite_celeb"=>{}}
+  ↳ app/controllers/application_controller.rb:32
+Unpermitted parameter: :dataToPost
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:4
+  [1m[36mFavoriteCeleb Load (253.1ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:30
+Completed 204 No Content in 257ms (ActiveRecord: 255.4ms)
+
+
+  ↳ app/controllers/favorite_celebs_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:5
+Completed 204 No Content in 266ms (ActiveRecord: 3.6ms)
+
+
+Started POST "/login" for ::1 at 2019-11-27 01:22:07 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 202 Accepted in 433ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:22:07 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:22:07 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.3ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:22:07 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.3ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 01:22:15 -0800
+Started DELETE "/del_favorites" for ::1 at 2019-11-27 01:22:15 -0800
+Processing by FavoriteCelebsController#create as */*
+  Parameters: {"dataToPost"=>[], "favorite_celeb"=>{}}
+Processing by FavoriteCelebsController#destroy as */*
+  Parameters: {"favorite_celeb"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+  [1m[36mFavoriteCeleb Load (0.6ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+ActionController::ParameterMissing (param is missing or the value is empty: favorite_celeb):
+  
+app/controllers/favorite_celebs_controller.rb:38:in `favorite_celeb_params'
+app/controllers/favorite_celebs_controller.rb:4:in `create'
+  ↳ app/controllers/favorite_celebs_controller.rb:30
+Completed 204 No Content in 17ms (ActiveRecord: 0.9ms)
+
+
+  [1m[36mFavoriteCeleb Load (0.7ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2019-11-27 01:27:13 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.02ms)
+Completed 202 Accepted in 452ms (Views: 9.0ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:27:14 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Started GET "/celebs" for ::1 at 2019-11-27 01:27:14 -0800
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 202 Accepted in 6ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (8.6ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 30ms (Views: 14.5ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:27:14 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.4ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/del_favorites" for ::1 at 2019-11-27 01:27:42 -0800
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 01:27:42 -0800
+  
+ActionController::RoutingError (No route matches [DELETE] "/del_favorites"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
 railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
@@ -17732,456 +18334,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/celebs" for ::1 at 2019-11-27 00:33:08 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started POST "/login" for ::1 at 2019-11-27 00:33:11 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/celebs" for ::1 at 2019-11-27 00:33:11 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-11-27 00:34:05 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/favicon.ico" for ::1 at 2019-11-27 00:34:06 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started POST "/login" for ::1 at 2019-11-27 00:36:24 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/celebs" for ::1 at 2019-11-27 00:36:25 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-11-27 00:37:11 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/favicon.ico" for ::1 at 2019-11-27 00:37:12 -0800
-  
-PG::ConnectionBad (could not connect to server: No such file or directory
-	Is the server running locally and accepting
-	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
-):
-  
-pg (1.1.4) lib/pg.rb:56:in `initialize'
-pg (1.1.4) lib/pg.rb:56:in `new'
-pg (1.1.4) lib/pg.rb:56:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
-activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
-activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
-activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
-activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-27 00:38:46 -0800
   
 ActiveRecord::NoDatabaseError (FATAL:  database "sent-tweet-backend_development" does not exist
@@ -18253,6 +18406,88 @@ activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+=======
+Processing by FavoriteCelebsController#create as */*
+  Parameters: {"dataToPost"=>["user_id: 1, celeb_id: 2", "user_id: 1, celeb_id: 1"], "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 400 Bad Request in 19ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: favorite_celeb):
+  
+app/controllers/favorite_celebs_controller.rb:38:in `favorite_celeb_params'
+app/controllers/favorite_celebs_controller.rb:4:in `create'
+Started POST "/login" for ::1 at 2019-11-27 01:33:36 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.83ms)
+Completed 202 Accepted in 457ms (Views: 9.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:33:36 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 202 Accepted in 8ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:33:36 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.5ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:33:36 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.3ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 01:34:02 -0800
+Started DELETE "/del_favorites" for ::1 at 2019-11-27 01:34:02 -0800
+Processing by FavoriteCelebsController#create as */*
+  Parameters: {"dataToPost"=>[], "favorite_celeb"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 400 Bad Request in 4ms (ActiveRecord: 9.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: favorite_celeb):
+  
+app/controllers/favorite_celebs_controller.rb:38:in `favorite_celeb_params'
+app/controllers/favorite_celebs_controller.rb:4:in `create'
+  
+ActionController::RoutingError (No route matches [DELETE] "/del_favorites"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+>>>>>>> 68b741d2c3da6d0900ec545c4c5c35102301f191
 actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
 railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
@@ -18274,6 +18509,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[35m (320.9ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_development" ENCODING = 'unicode'[0m
   ↳ bin/rails:9
   [1m[35m (324.3ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_test" ENCODING = 'unicode'[0m
@@ -18317,6 +18553,75 @@ Migrating to CreateTweetAccounts (20191021164326)
   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
   ↳ bin/rails:9
   [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "tweet_accounts" ("id" bigserial primary key, "celeb_id" bigint, "tweet_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c0b1b45b88"
+=======
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (450.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sent-tweet-backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (682.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sent-tweet-backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (4920.3ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1872.1ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (579.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sent-tweet-backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1018.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sent-tweet-backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (4213.4ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1959.9ms)[0m  [1m[35mCREATE DATABASE "sent-tweet-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20191021163539)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163539_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163539"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCelebs (20191021163635)
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "celebs" ("id" bigserial primary key, "name" character varying, "celeb_username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163635_create_celebs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163635"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweets (20191021163659)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "content" text, "sentiment" float, "celeb_username" character varying, "date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021163659_create_tweets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021163659"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweetAccounts (20191021164326)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "tweet_accounts" ("id" bigserial primary key, "celeb_id" bigint, "tweet_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c0b1b45b88"
+>>>>>>> 68b741d2c3da6d0900ec545c4c5c35102301f191
 FOREIGN KEY ("celeb_id")
   REFERENCES "celebs" ("id")
 , CONSTRAINT "fk_rails_374cd7e1a3"
@@ -18324,6 +18629,7 @@ FOREIGN KEY ("tweet_id")
   REFERENCES "tweets" ("id")
 )[0m
   ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_celeb_id" ON "tweet_accounts"  ("celeb_id")[0m
   ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
   [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_tweet_id" ON "tweet_accounts"  ("tweet_id")[0m
@@ -18336,6 +18642,20 @@ Migrating to CreateFavoriteCelebs (20191021164348)
   [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
   ↳ bin/rails:9
   [1m[35m (49.7ms)[0m  [1m[35mCREATE TABLE "favorite_celebs" ("id" bigserial primary key, "user_id" bigint, "celeb_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b480b4a972"
+=======
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_celeb_id" ON "tweet_accounts"  ("celeb_id")[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_tweet_accounts_on_tweet_id" ON "tweet_accounts"  ("tweet_id")[0m
+  ↳ db/migrate/20191021164326_create_tweet_accounts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021164326"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFavoriteCelebs (20191021164348)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "favorite_celebs" ("id" bigserial primary key, "user_id" bigint, "celeb_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b480b4a972"
+>>>>>>> 68b741d2c3da6d0900ec545c4c5c35102301f191
 FOREIGN KEY ("user_id")
   REFERENCES "users" ("id")
 , CONSTRAINT "fk_rails_66d7aabe9f"
@@ -18343,6 +18663,7 @@ FOREIGN KEY ("celeb_id")
   REFERENCES "celebs" ("id")
 )[0m
   ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+<<<<<<< HEAD
   [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_user_id" ON "favorite_celebs"  ("user_id")[0m
   ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
   [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_celeb_id" ON "favorite_celebs"  ("celeb_id")[0m
@@ -18538,11 +18859,107 @@ Started GET "/profile" for ::1 at 2019-11-27 00:43:11 -0800
 Processing by UsersController#profile as */*
   Parameters: {"user"=>{}}
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+=======
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_user_id" ON "favorite_celebs"  ("user_id")[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_favorite_celebs_on_celeb_id" ON "favorite_celebs"  ("celeb_id")[0m
+  ↳ db/migrate/20191021164348_create_favorite_celebs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021164348"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (8.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-27 09:47:03.115068"], ["updated_at", "2019-11-27 09:47:03.115068"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2512786995481612710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCeleb Create (23.1ms)[0m  [1m[32mINSERT INTO "celebs" ("name", "celeb_username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Barack Obama"], ["celeb_username", "@BarackObama"], ["created_at", "2019-11-27 09:47:03.213526"], ["updated_at", "2019-11-27 09:47:03.213526"]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mCeleb Create (0.3ms)[0m  [1m[32mINSERT INTO "celebs" ("name", "celeb_username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Katy Perry"], ["celeb_username", "@katyperry"], ["created_at", "2019-11-27 09:47:03.240545"], ["updated_at", "2019-11-27 09:47:03.240545"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+Started POST "/users" for ::1 at 2019-11-27 01:47:31 -0800
+Started GET "/celebs" for ::1 at 2019-11-27 01:47:31 -0800
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dc/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"a", "username"=>"a", "password"=>"[FILTERED]", "user"=>{"username"=>"a", "name"=>"a"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Exists (8.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "a"], ["password_digest", "$2a$12$ewsIe85t7.kQPy3UPQ7HSuYD1q40o7GHQRyVmajGWr8uKwMSFdIpy"], ["name", "a"], ["created_at", "2019-11-27 09:47:31.592251"], ["updated_at", "2019-11-27 09:47:31.592251"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+  ↳ app/controllers/users_controller.rb:29
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 10.4ms | ActiveRecord: 223.3ms)
+
+
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "a"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.27ms)
+Completed 201 Created in 263ms (Views: 5.3ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:47:31 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:47:31 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2019-11-27 01:48:08 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "auth"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 436ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-27 01:48:08 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+>>>>>>> 68b741d2c3da6d0900ec545c4c5c35102301f191
   ↳ app/controllers/application_controller.rb:32
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/controllers/application_controller.rb:32
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/controllers/application_controller.rb:32
+<<<<<<< HEAD
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.91ms)
 Completed 202 Accepted in 32ms (Views: 15.6ms | ActiveRecord: 0.7ms)
 
@@ -18614,3 +19031,85 @@ Filter chain halted as :authorized rendered or redirected
 Completed 401 Unauthorized in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
 
 
+=======
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:48:08 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (8.7ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 19ms (Views: 7.2ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/celebs" for ::1 at 2019-11-27 01:48:08 -0800
+Processing by CelebsController#index as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCeleb Load (0.3ms)[0m  [1m[34mSELECT "celebs".* FROM "celebs"[0m
+  ↳ app/controllers/celebs_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.5ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (18.0ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 1], ["created_at", "2019-11-27 09:49:04.797580"], ["updated_at", "2019-11-27 09:49:04.797580"]]
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCeleb Load (0.2ms)[0m  [1m[34mSELECT  "celebs".* FROM "celebs" WHERE "celebs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFavoriteCeleb Create (0.4ms)[0m  [1m[32mINSERT INTO "favorite_celebs" ("user_id", "celeb_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["celeb_id", 2], ["created_at", "2019-11-27 09:49:07.174928"], ["updated_at", "2019-11-27 09:49:07.174928"]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/del_favorites" for ::1 at 2019-11-27 01:49:19 -0800
+Started POST "/favorite_celebs" for ::1 at 2019-11-27 01:49:19 -0800
+Processing by FavoriteCelebsController#create as */*
+  Parameters: {"dataToPost"=>["user_id: 1, celeb_id: 1", "user_id: 1, celeb_id: 2"], "favorite_celeb"=>{"dataToPost"=>["user_id: 1, celeb_id: 1", "user_id: 1, celeb_id: 2"]}}
+Processing by FavoriteCelebsController#logout_remove as */*
+  Parameters: {"user_id"=>1, "favorite_celeb"=>{"user_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Unpermitted parameter: :dataToPost
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:5
+Completed 204 No Content in 21ms (ActiveRecord: 5.8ms)
+
+
+  [1m[36mFavoriteCeleb Load (40.6ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:31
+  [1m[36mFavoriteCeleb Destroy (0.5ms)[0m  [1m[31mDELETE FROM "favorite_celebs" WHERE "favorite_celebs"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/favorite_celebs_controller.rb:31
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:31
+  [1m[36mFavoriteCeleb Destroy (0.4ms)[0m  [1m[31mDELETE FROM "favorite_celebs" WHERE "favorite_celebs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/favorite_celebs_controller.rb:31
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:31
+Completed 204 No Content in 53ms (ActiveRecord: 49.4ms)
+
+
+  [1m[36mFavoriteCeleb Load (0.3ms)[0m  [1m[34mSELECT  "favorite_celebs".* FROM "favorite_celebs" LIMIT $1[0m  [["LIMIT", 11]]
+>>>>>>> 68b741d2c3da6d0900ec545c4c5c35102301f191
