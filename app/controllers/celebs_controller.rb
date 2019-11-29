@@ -27,14 +27,12 @@ class CelebsController < ApplicationController
         end
         @celeb_results = client.friends(
             result_type: "recent")
-            # .each do |tweet|
-            #     [
-            #     # "#{tweet.user}", 
-            #     "#{tweet.user.screen_name}"]
-            # end
+            .each do |tweet|
+                [tweet]
+            end
             render json: @celeb_results
             # puts "twitter restuls below"
-            # puts celeb_results
+            puts @celeb_results
             
     
         # sentiment_temp = []
