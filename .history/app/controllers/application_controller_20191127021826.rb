@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
              'test', 'HS256')
     end
 
-    def auth_er
+    def auth_header
         # console.log("hit auth_header in application_controller")
         request.headers['Authorization']
     end

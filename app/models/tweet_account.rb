@@ -1,3 +1,4 @@
 class TweetAccount < ApplicationRecord
-    belongs_to :twitter_account
-  end
+belongs_to :celeb    
+belongs_to :tweet
+end

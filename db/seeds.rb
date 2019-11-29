@@ -11,3 +11,5 @@ Celeb.create(
     celeb_username: "@katyperry",
     # bio: "Love. Light."
 )
+
+# FavoriteCeleb.create( user_id: 1, celeb_id: 1)
