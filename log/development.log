@@ -20918,3 +20918,4 @@ Twitter::Error::TooManyRequests (Rate limit exceeded):
   
 app/controllers/celebs_controller.rb:28:in `get_all_celebs'
 >>>>>>> b38c9edeb8b5ec784061a0e2cb1a29f718ea148f
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
