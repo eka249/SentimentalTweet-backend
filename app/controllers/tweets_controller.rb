@@ -9,16 +9,19 @@ class TweetsController < ApplicationController
         render json: tweet
     end
 
-    def new
-    end
-
     def create
+        
     end
 
-    # def update
-    #     tweet = Tweet.find(params[tweet_params])
-    #     byebug
-    # end
+    def get_tweet
+        
+    end
+
+
+    def update
+        tweet = Tweet.find(params[tweet_params])
+        byebug
+    end
 
     def destroy
     end
@@ -26,6 +29,6 @@ class TweetsController < ApplicationController
     private
 
     def tweet_params
-        params.require(:tweet).permit(:content,:sentiment)
+        params.require(:tweet).permit(:content,:sentiment, :celeb_username)
     end
 end

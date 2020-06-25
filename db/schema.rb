@@ -15,48 +15,50 @@ ActiveRecord::Schema.define(version: 2019_10_21_164348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "favorite_accounts", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "twitter_account_id"
+  create_table "celebs", force: :cascade do |t|
+    t.string "name"
+    t.string "celeb_username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["twitter_account_id"], name: "index_favorite_accounts_on_twitter_account_id"
-    t.index ["user_id"], name: "index_favorite_accounts_on_user_id"
+  end
+
+  create_table "favorite_celebs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "celeb_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["celeb_id"], name: "index_favorite_celebs_on_celeb_id"
+    t.index ["user_id"], name: "index_favorite_celebs_on_user_id"
   end
 
   create_table "tweet_accounts", force: :cascade do |t|
-    t.bigint "twitter_account_id"
+    t.bigint "celeb_id"
     t.bigint "tweet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["celeb_id"], name: "index_tweet_accounts_on_celeb_id"
     t.index ["tweet_id"], name: "index_tweet_accounts_on_tweet_id"
-    t.index ["twitter_account_id"], name: "index_tweet_accounts_on_twitter_account_id"
   end
 
   create_table "tweets", force: :cascade do |t|
     t.text "content"
     t.float "sentiment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "twitter_accounts", force: :cascade do |t|
-    t.string "name"
-    t.string "twitter_account"
+    t.string "celeb_username"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "favorite_accounts", "twitter_accounts"
-  add_foreign_key "favorite_accounts", "users"
+  add_foreign_key "favorite_celebs", "celebs"
+  add_foreign_key "favorite_celebs", "users"
+  add_foreign_key "tweet_accounts", "celebs"
   add_foreign_key "tweet_accounts", "tweets"
-  add_foreign_key "tweet_accounts", "twitter_accounts"
 end

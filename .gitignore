@@ -1,5 +1,7 @@
 # Compiled source #
 ###################
+api.rb
+
 *.com
 *.class
 *.dll

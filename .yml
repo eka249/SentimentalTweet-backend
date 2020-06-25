@@ -1,3 +1,8 @@
-twitter:
-
-sentiment:
+{
+  "consumer_key": "rkLbMBN9SoNIcMxWaFHxmxBp0",
+  "consumer_secret": "jSYtQjWsrzMXzCQ7TcoOZHN02dSzKa7lyp4sLz9YhaZGj1ieth",
+  "access_token_key": "1185644080736325632-GzeXHY2IiamNmx1p8GIvMntrAatKP4",
+  "access_token_secret": "ToOfI5wHGHBGH5nXH4yeGWrisGAEclHZJYVwoFnZkGXuO",
+  "sentiment_key": "1b10223ff87a421490ff22d6f26fbda0",
+}
+# sentiment:
