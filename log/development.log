@@ -20934,3 +20934,1608 @@ Processing by CelebsController#get_all_celebs as */*
 Completed 200 OK in 333ms (Views: 2.7ms | ActiveRecord: 0.2ms)
 
 
+Started POST "/login" for ::1 at 2019-11-29 13:27:37 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.73ms)
+Completed 202 Accepted in 476ms (Views: 6.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 13:27:38 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 202 Accepted in 5ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 13:27:38 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.87ms)
+Completed 200 OK in 344ms (Views: 3.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 13:27:38 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.53ms)
+Completed 200 OK in 332ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:30:41 -0800
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.26ms)
+Completed 202 Accepted in 492ms (Views: 12.4ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:30:42 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:30:42 -0800
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 202 Accepted in 12ms (Views: 4.4ms | ActiveRecord: 1.3ms)
+
+
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.58ms)
+Completed 200 OK in 778ms (Views: 4.2ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:30:43 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (1.24ms)
+Completed 200 OK in 692ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:30:59 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (1.3ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 18ms (Views: 1.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:30:59 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.5ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:34:35 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 202 Accepted in 460ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:34:35 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 202 Accepted in 5ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:34:35 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.97ms)
+Completed 200 OK in 536ms (Views: 3.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:34:36 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.58ms)
+Completed 200 OK in 508ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:34:38 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (3.9ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 18ms (Views: 1.8ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:34:38 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:36:00 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 456ms (Views: 1.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:36:01 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:36:01 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.89ms)
+Completed 200 OK in 731ms (Views: 2.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:36:02 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.59ms)
+Completed 200 OK in 847ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:36:04 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.9ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.04ms)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:36:04 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (1.3ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:36:59 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 450ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:36:59 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 202 Accepted in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:36:59 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.63ms)
+Completed 200 OK in 511ms (Views: 2.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:37:00 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.58ms)
+Completed 200 OK in 494ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:37:03 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.6ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:37:31 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 480ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:37:31 -0800
+Processing by UsersController#profile as */*
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:37:31 -0800
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Processing by CelebsController#get_all_celebs as */*
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"celeb"=>{}}
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 40ms (Views: 6.0ms | ActiveRecord: 4.3ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.68ms)
+Completed 200 OK in 596ms (Views: 2.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:37:32 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.58ms)
+Completed 200 OK in 545ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:37:38 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (1.0ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:37:38 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (6.0ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 16ms (Views: 2.5ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:37:52 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 459ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:37:53 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:37:53 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.83ms)
+Completed 200 OK in 478ms (Views: 2.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:37:53 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.6ms)
+Completed 200 OK in 693ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:37:57 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:39:55 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 202 Accepted in 483ms (Views: 4.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:39:56 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 6ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:39:56 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.57ms)
+Completed 200 OK in 787ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:39:57 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (1.22ms)
+Completed 200 OK in 705ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:39:58 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.8ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:39:58 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (2.3ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 12ms (Views: 1.5ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:40:22 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 458ms (Views: 1.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:40:22 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:40:22 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.53ms)
+Completed 200 OK in 475ms (Views: 2.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:40:23 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 0.2ms)
+
+
+  
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  
+app/controllers/celebs_controller.rb:28:in `get_all_celebs'
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:40:43 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.9ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:45:08 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 452ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:45:08 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 5ms (Views: 1.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:45:08 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 500 Internal Server Error in 530ms (ActiveRecord: 15.0ms)
+
+
+  
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  
+app/controllers/celebs_controller.rb:28:in `get_all_celebs'
+Started POST "/login" for ::1 at 2019-11-29 23:45:33 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 455ms (Views: 1.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:45:33 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:45:33 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 500 Internal Server Error in 893ms (ActiveRecord: 3.1ms)
+
+
+  
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  
+app/controllers/celebs_controller.rb:28:in `get_all_celebs'
+Started POST "/login" for ::1 at 2019-11-29 23:46:04 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 450ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:46:04 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:46:04 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.88ms)
+Completed 200 OK in 521ms (Views: 2.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:47:52 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 450ms (Views: 1.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:47:52 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:47:52 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.53ms)
+Completed 200 OK in 554ms (Views: 1.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:47:57 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (1.6ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for ::1 at 2019-11-29 23:49:58 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 455ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for ::1 at 2019-11-29 23:49:58 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 5ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-11-29 23:49:58 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Twitter::Cursor (0.56ms)
+Completed 200 OK in 553ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2019-11-29 23:50:01 -0800
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.4ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users" for ::1 at 2019-12-03 01:03:13 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"e", "username"=>"e", "password"=>"[FILTERED]", "user"=>{"username"=>"e", "name"=>"e"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "e"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "e"], ["password_digest", "$2a$12$Yy6HXAWG3ki4kI9v2PJGaeMY/1oBE8NPHN4gJmdxWCw52C1vM6B7y"], ["name", "e"], ["created_at", "2019-12-03 09:03:13.625627"], ["updated_at", "2019-12-03 09:03:13.625627"]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "e"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.48ms)
+Completed 201 Created in 276ms (Views: 8.6ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:03:13 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2019-12-03 01:04:41 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 490ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:04:42 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 5ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:04:42 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+No serializer found for resource: "Now Playing Some Heat 🔥 No Guidance By Chris Brown ft Drake Listen Now On https://t.co/Xv36w5Tl2r The Newest &amp; Hott… https://t.co/5tPeR1E1vN"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.27ms)
+Completed 200 OK in 961ms (Views: 4.0ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:07:12 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 535ms (Views: 1.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:07:13 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 5ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:07:13 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+No serializer found for resource: "Listen hits music rock pop dance now playing: Big Rings by Drake &amp; Future on https://t.co/GtGbDTvdkX https://t.co/GPMGFHLumq"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.09ms)
+Completed 200 OK in 1017ms (Views: 1.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:07:41 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 537ms (Views: 4.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:07:42 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 8ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:07:42 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 257ms (Views: 1.2ms | ActiveRecord: 80.8ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:08:06 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 555ms (Views: 4.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:08:07 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 202 Accepted in 13ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:08:07 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+No serializer found for resource: "Good afternoon Empress @anna_mukasa please play for me Cold Waters by Major Lazor ft Justin Bieber It will make my… https://t.co/Czy0TMU1Wg"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.09ms)
+Completed 200 OK in 988ms (Views: 1.8ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:09:01 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 521ms (Views: 6.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:09:02 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:09:02 -0800
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 202 Accepted in 87ms (Views: 2.7ms | ActiveRecord: 2.0ms)
+
+
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+No serializer found for resource: "@lovestoryfetish @flatIinesIut @imarisslave @chartdata @DanAndShay @justinbieber A wedding?? Lmfao was the music vi… https://t.co/SxgnuPToFG"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.08ms)
+Completed 200 OK in 1246ms (Views: 1.7ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:09:40 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 510ms (Views: 3.5ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:09:40 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 202 Accepted in 6ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:09:40 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 253ms (Views: 1.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:15:31 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 202 Accepted in 584ms (Views: 4.7ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:15:31 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:15:31 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 3.5ms)
+
+
+  
+Twitter::Error::NotFound (User not found.):
+  
+app/controllers/celebs_controller.rb:54:in `get_all_celebs'
+Started POST "/login" for ::1 at 2019-12-03 01:15:59 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 511ms (Views: 3.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:16:00 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 4ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:16:00 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 204 No Content in 271ms (ActiveRecord: 21.5ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:17:41 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 501ms (Views: 3.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:17:42 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:17:42 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `model_name' for Twitter::User:Class):
+  
+app/controllers/celebs_controller.rb:56:in `get_all_celebs'
+Started POST "/login" for ::1 at 2019-12-03 01:22:19 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 778ms (Views: 6.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:22:20 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:22:20 -0800
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 202 Accepted in 90ms (Views: 83.8ms | ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:135: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/celebs_controller.rb:135: syntax error, unexpected end-of-input, expecting end
+Started POST "/login" for ::1 at 2019-12-03 01:22:39 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 202 Accepted in 735ms (Views: 12.0ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:22:40 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Started GET "/profile" for ::1 at 2019-12-03 01:22:40 -0800
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 28.8ms)
+
+
+  
+NoMethodError (undefined method `take' for #<Twitter::User id=27260086>):
+  
+app/controllers/celebs_controller.rb:54:in `get_all_celebs'
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 202 Accepted in 6ms (Views: 1.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:35:48 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 521ms (Views: 3.7ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:35:49 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 4ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:35:49 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+Completed 500 Internal Server Error in 671ms (ActiveRecord: 7.7ms)
+
+
+  
+NoMethodError (undefined method `model_name' for Twitter::User:Class):
+  
+app/controllers/celebs_controller.rb:58:in `get_all_celebs'
+Started POST "/login" for ::1 at 2019-12-03 01:36:09 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 514ms (Views: 3.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:36:09 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 4ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:36:09 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Completed 204 No Content in 700ms (ActiveRecord: 1.9ms)
+
+
+Started POST "/login" for ::1 at 2019-12-03 01:37:31 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 1131ms (Views: 4.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:37:32 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 202 Accepted in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:37:32 -0800
+Processing by CelebsController#get_all_celebs as */*
+  Parameters: {"celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 500 Internal Server Error in 614ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `model_name' for Twitter::User:Class):
+  
+app/controllers/celebs_controller.rb:58:in `get_all_celebs'
+Started POST "/login" for ::1 at 2019-12-03 01:38:33 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Completed 202 Accepted in 552ms (Views: 5.1ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:38:34 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 202 Accepted in 3ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:38:34 -0800
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected '}', expecting =>
+...('justin bieber', options = {3})
+...                              ^):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected '}', expecting =>
+Started POST "/login" for ::1 at 2019-12-03 01:41:18 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 202 Accepted in 597ms (Views: 3.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:41:19 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 38ms (Views: 3.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:41:19 -0800
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected '}', expecting =>
+..._search('justin', options = {3})
+...                              ^):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected '}', expecting =>
+Started POST "/login" for ::1 at 2019-12-03 01:42:09 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 202 Accepted in 542ms (Views: 16.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:42:09 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 202 Accepted in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:42:10 -0800
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected '}', expecting =>
+..._search('justin', options = {3}) => Array<Twitter::User>
+...                              ^
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: @user_results
+               ^~~~~):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected '}', expecting =>
+app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started POST "/login" for ::1 at 2019-12-03 01:44:28 -0800
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"45", "password"=>"[FILTERED]", "auth"=>{"username"=>"45", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "45"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 558ms (Views: 4.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-03 01:44:29 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 202 Accepted in 12ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_celebs" for ::1 at 2019-12-03 01:44:29 -0800
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+...arch('justin', options = {}) => Array<Twitter::User>
+...                             ^~
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: @user_results
+               ^~~~~):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started POST "/login" for ::1 at 2019-12-21 00:46:06 -0800
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"ellyn", "password"=>"[FILTERED]", "auth"=>{"username"=>"ellyn", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ellyn"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.5ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/auth_controller.rb:14:in `create'
+Started GET "/get_celebs" for ::1 at 2019-12-21 00:46:06 -0800
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+...arch('justin', options = {}) => Array<Twitter::User>
+...                             ^~
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: @user_results
+               ^~~~~):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started POST "/users" for ::1 at 2019-12-21 00:46:12 -0800
+Started GET "/get_celebs" for ::1 at 2019-12-21 00:46:12 -0800
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"ethan", "username"=>"ethan", "password"=>"[FILTERED]", "user"=>{"username"=>"ethan", "name"=>"ethan"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+  
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ethan"], ["LIMIT", 1]]
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+...arch('justin', options = {}) => Array<Twitter::User>
+...                             ^~
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: @user_results
+               ^~~~~):
+  ↳ app/controllers/users_controller.rb:29
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+  [1m[36mUser Create (23.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ethan"], ["password_digest", "$2a$12$HwdTWu8/uoxqu/AiCNCH8uJ1lpteKOZnvy0CxeO3MtXLAHkcS4C3a"], ["name", "ethan"], ["created_at", "2019-12-21 08:46:12.713140"], ["updated_at", "2019-12-21 08:46:12.713140"]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "ethan"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.11ms)
+Completed 201 Created in 282ms (Views: 6.5ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/profile" for ::1 at 2019-12-21 00:46:12 -0800
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2020-04-08 21:54:26 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ellyn/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"1", "password"=>"[FILTERED]", "auth"=>{"username"=>"1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 401 Unauthorized in 472ms (Views: 8.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/get_celebs" for ::1 at 2020-04-08 21:54:26 -0400
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+...arch('justin', options = {}) => Array<Twitter::User>
+...                             ^~
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: @user_results
+               ^~~~~):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started POST "/login" for ::1 at 2020-04-08 21:54:30 -0400
+Processing by AuthController#create as */*
+  Parameters: {"username"=>"1", "password"=>"[FILTERED]", "auth"=>{"username"=>"1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.89ms)
+Completed 202 Accepted in 465ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profile" for ::1 at 2020-04-08 21:54:31 -0400
+Processing by UsersController#profile as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+Started GET "/get_celebs" for ::1 at 2020-04-08 21:54:31 -0400
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.56ms)
+Completed 202 Accepted in 33ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+...arch('justin', options = {}) => Array<Twitter::User>
+...                             ^~
+/Users/ellyn/Development/2_Mod4/SentimentalTweet/SentimentalTweet-backend/app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+        render json: @user_results
+               ^~~~~):
+  
+app/controllers/celebs_controller.rb:54: syntax error, unexpected =>, expecting end
+app/controllers/celebs_controller.rb:58: syntax error, unexpected tLABEL, expecting do or '{' or '('
+Started GET "/favorite_celebs/1" for ::1 at 2020-04-08 21:54:56 -0400
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (42.9ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 48ms (Views: 1.0ms | ActiveRecord: 48.4ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2020-04-08 21:55:05 -0400
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (15.5ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 21ms (Views: 1.2ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/favorite_celebs/1" for ::1 at 2020-04-08 22:01:34 -0400
+Processing by FavoriteCelebsController#show as */*
+  Parameters: {"id"=>"1", "favorite_celeb"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+  [1m[36mFavoriteCeleb Load (0.5ms)[0m  [1m[34mSELECT "favorite_celebs".* FROM "favorite_celebs"[0m
+  ↳ app/controllers/favorite_celebs_controller.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:32
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.04ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+
+

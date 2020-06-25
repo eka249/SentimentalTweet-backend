@@ -17,23 +17,7 @@ class CelebsController < ApplicationController
 
     #currently have a get celebs as friends and used to have one by username
     def get_all_celebs
-        # puts "hit get_celeb"
-        # client = 
-        #     Twitter::REST::Client.new do |config|
-        #     config.consumer_key= "#{ENV["CONSUMER_KEY"]}"
-        #     config.consumer_secret = "#{ENV["CONSUMER_SECRET"]}"
-        #     config.access_token= "#{ENV["ACCESS_TOKEN_KEY"]}"
-        #     config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
-        # end
-        # @celeb_results = client.friends(
-        #     result_type: "recent")
-        #     .each do |tweet|
-        #         [tweet]
-        #     end
-        #     render json: @celeb_results
-        #     # puts "twitter restuls below"
-        #     puts @celeb_results
-
+        puts "hit get_celeb"
         client = 
             Twitter::REST::Client.new do |config|
             config.consumer_key= "#{ENV["CONSUMER_KEY"]}"
@@ -41,25 +25,16 @@ class CelebsController < ApplicationController
             config.access_token= "#{ENV["ACCESS_TOKEN_KEY"]}"
             config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
         end
-        # @celeb_results = client.search(
-        #     # "by: "+ params[:celebrity],
-        #     "by: justinbie",
-        #     #^add proper params name
-        #     result_type: "recent").take(3).collect do |tweet|
-        #         [
-        #         "#{tweet.full_text}", "#{tweet.user.screen_name}"]
-        #     end
-        #     render json: @celeb_results
+        @celeb_results = client.friends(
+            result_type: "recent")
+            .each do |tweet|
+                [tweet]
+            end
+            render json: @celeb_results
+            # puts "twitter restuls below"
+            puts @celeb_results
             
-        @user_results = client.user_search('justin', options = {}) => Array<Twitter::User>
-        # .take(1).each do |user| 
-        # puts "user.screen_name"
-        # end
-        render json: @user_results
-        end
-
-
-         
+    
         # sentiment_temp = []
         # puts "sentiment temp array"
         # puts sentiment_temp
@@ -93,7 +68,7 @@ class CelebsController < ApplicationController
 
         #refer to https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-call-api
         # https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cunix#get-the-keys-for-your-resource    
-
+    end
     def sent_analysis
         key_var = "TEXT_ANALYTICS_SUBSCRIPTION_KEY"
         if (!ENV[key_var])

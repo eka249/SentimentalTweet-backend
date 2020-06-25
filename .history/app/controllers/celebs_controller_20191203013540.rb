@@ -51,7 +51,7 @@ class CelebsController < ApplicationController
         #     end
         #     render json: @celeb_results
             
-        @user_results = client.user_search('justin', options = {}) => Array<Twitter::User>
+        @user_results = client.user_search("justinbieber")
         # .take(1).each do |user| 
         # puts "user.screen_name"
         # end

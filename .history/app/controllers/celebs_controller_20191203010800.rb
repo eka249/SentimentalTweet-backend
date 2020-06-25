@@ -41,21 +41,16 @@ class CelebsController < ApplicationController
             config.access_token= "#{ENV["ACCESS_TOKEN_KEY"]}"
             config.access_token_secret = "#{ENV["ACCESS_TOKEN_SECRET"]}"
         end
-        # @celeb_results = client.search(
-        #     # "by: "+ params[:celebrity],
-        #     "by: justinbie",
-        #     #^add proper params name
-        #     result_type: "recent").take(3).collect do |tweet|
-        #         [
-        #         "#{tweet.full_text}", "#{tweet.user.screen_name}"]
-        #     end
-        #     render json: @celeb_results
+        @celeb_results = client.search(
+            # "by: "+ params[:celebrity],
+            "by: justin",
+            #^add proper params name
+            result_type: "recent").take(3).collect do |tweet|
+                [
+                "#{tweet.full_text}", "#{tweet.user.screen_name}"]
+            end
+            render json: @celeb_results
             
-        @user_results = client.user_search('justin', options = {}) => Array<Twitter::User>
-        # .take(1).each do |user| 
-        # puts "user.screen_name"
-        # end
-        render json: @user_results
         end
 
 
