@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'dotenv-rails'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'active_model_serializers'
 gem 'bcrypt', '~> 3.1.13'
 # gem "bcrypt", "~> 3.1.1"
